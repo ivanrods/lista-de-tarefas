@@ -1,3 +1,11 @@
+let lightMode = true
+const buttonToggle = document.getElementById('toggle-mode')
+
+buttonToggle.addEventListener('click', (event) => {
+    document.documentElement.classList.toggle('dark')
+})
+
+
 
 let contador = 0;
 let input = document.getElementById("inputTarefa");

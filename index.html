@@ -11,10 +11,15 @@
     <link rel="shortcut icon" href="./assets/check-square.svg" type="image/x-svg">
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <title>To do list</title>
 </head>
 <body>
     <div class="app">
+            <button id="toggle-mode" >
+                 <i class="ph-bold ph-sun"></i>
+                 <i class="ph-bold ph-moon"></i>
+             </button>
        <header>
         <section>
             <input id="inputTarefa" type="text" placeholder="Review Presentation">
@@ -22,9 +27,9 @@
         </section>
         <h2>You have <span>0</span> task(s) to complete</h2>
         </header>
-    <body>
+    
         <main id="areaLista"></main>
-    </body> 
+    
     </div>
 
     <script src="js/controle.js"></script>
