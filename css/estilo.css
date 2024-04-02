@@ -15,6 +15,7 @@ html.dark{
     --text-color: #fff;
     --primary-color: #181a24;
     --seconde-color:#171921;
+    --bg-color: #767882;
 }
 html.dark .ph-moon,
 html:not(.dark) .ph-sun {
@@ -22,8 +23,9 @@ html:not(.dark) .ph-sun {
 }
 #toggle-mode{
     font-size: 3rem;
-    margin: auto 1rem auto auto;
-
+    position: fixed;
+    top: 3rem;
+    right: 3rem;
     padding: 0;
     text-align: right;
     color: var(--text-color);
@@ -38,7 +40,6 @@ body{
     place-items: center;
 }
 .app{
-    
     margin: 7rem auto auto auto;
     display: grid; 
 }
@@ -61,7 +62,7 @@ input{
     height: 4rem;
     font-size: 1.5rem;
     background-color: var(--primary-color);
-    width: 25rem;
+    width: 23rem;
     border: none;
     color: var(--text-color);
     border-bottom: 1px solid var(--text-color);
@@ -103,19 +104,16 @@ main{
 }
 
 main::-webkit-scrollbar {
-    width: .2rem;
-    color: #065E7C;
+    width: .4rem;
     position: absolute;
     right: 0;
   }
   
 main::-webkit-scrollbar-thumb{
-    background-color: var(--secondary-color);
-    
+    background-color: #949494;
+    height: 5rem;
     border-radius: 1rem;
-  
     border: .8rem solid rgba(0, 0, 0, 0);
-   
   }
 
 .item{
