@@ -30,7 +30,7 @@ function addTarefa() {
             ${valorInput}
         </div>
         <div class="item-botao">
-            <button class="edit"><i class="mdi mdi-note-edit-outline"></i></button>
+            <button onclick="editar(${contador})" class="edit"><i class="mdi mdi-note-edit-outline"></i></button>
             <button onclick="deletar(${contador})" class="delete"><i class="mdi mdi-trash-can-outline"></i></button>
             
         </div>
@@ -64,31 +64,33 @@ function marcarTarefa(id) {
   if (classe == "item") {
     item.classList.add("clicado");
     --contador;
-    
     numberTask.innerHTML = contador
-
     var icone = document.getElementById("icone_" + id);
     icone.classList.remove("mdi-circle-outline");
     icone.classList.add("mdi-check-circle");
-    
-
     item.parentNode.appendChild(item);
-    
+  
   } else {
     item.classList.remove("clicado");
     ++contador;
-   
-    numberTask.innerHTML = contador
-    
-
+    numberTask.innerHTML = contador 
     var icone = document.getElementById("icone_" + id);
     icone.classList.remove("mdi-check-circle");
     icone.classList.add("mdi-circle-outline");
-    
   }
   
 }
+function editar(id){
+  newNome = prompt("Make the change")
+  let item = document.getElementById(id);
+  var nome = item.querySelectorAll(".item-nome");
 
+  nome.forEach(function(div) {
+  let nome = div.textContent;
+  div.innerHTML = newNome
+});
+
+}
 input.addEventListener("keyup", function (event) {
   //SE TECLOU ENTER (13)
   if (event.keyCode === 13) {
